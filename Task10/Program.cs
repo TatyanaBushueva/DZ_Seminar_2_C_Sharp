@@ -9,8 +9,15 @@
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(SecondDigit(number));
 
+if ((Math.Abs(number) > 99) && (Math.Abs(number) <= 999))
+{
+    Console.WriteLine(SecondDigit(Math.Abs(number)));
+}
+else
+{
+    Console.WriteLine("Введенное число не является трехзначным");
+}
 
 int SecondDigit(int num)
 {

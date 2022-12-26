@@ -8,9 +8,9 @@
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 99)
+if (Math.Abs(number) > 99)
 {
-    Console.WriteLine(ThirdDigit(number));
+    Console.WriteLine(ThirdDigit(Math.Abs(number)));
 }
 else
 {

@@ -7,25 +7,16 @@
 Console.WriteLine("Введите цифру от 1 до 7: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if ((number >= 1) & (number <= 7))
+if ((number >= 1) && (number <= 7))
 {
-    Console.WriteLine(IsWeekend(number));
+    Console.WriteLine(IsWeekend(number) ? "Да" : "Нет");
 }
 else
 {
     Console.WriteLine("Введена неверная цифра");
 }
 
-string IsWeekend(int num)
+bool IsWeekend(int num)
 {
-    string IsWeekend;
-    if ((num == 6) | (num == 7))
-    {
-        IsWeekend = "да";
-    }
-    else
-    {   
-        IsWeekend = "нет";
-    }
-    return IsWeekend;
+    return ((num == 6) || (num == 7));
 }
